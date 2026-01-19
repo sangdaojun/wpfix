@@ -57,14 +57,17 @@ tcc wpfix.c   -IC:\winapi\include\winapi -L"C:\tcc32\lib"    -lkernel32   -luser
 </p>
 
 1. Adding a Path
+
 Add the current directory or a specific path. It automatically removes existing duplicates before adding.
 
 Bash
 
 wpfix add .
+
 wpfix add C:\Tools\my_bin
 
 2. Removing a Path
+
 Removes a specific directory from the User PATH registry.
 
 Bash
@@ -72,14 +75,17 @@ Bash
 wpfix del C:\Old\Path
 
 3. Surgeon Mode (Diagnostics)
+
 The "Surgeon" command performs a deep health check of your entire environment.
 
 Bash
 
 wpfix surgeon
+
 Identifies broken links (folders that no longer exist) in White.
 
 4. Viewing Paths
+
 Show: Lists paths currently loaded in the active window's memory.
 
 List: Lists paths saved in the Windows Registry (User).
@@ -87,8 +93,11 @@ List: Lists paths saved in the Windows Registry (User).
 Bash
 
 wpfix show
+
 wpfix list
+
 🔧 Technical Mechanism
+
 wpfix operates on three levels:
 
 Registry Level: Modifies HKEY_CURRENT_USER\Environment directly for persistence.
