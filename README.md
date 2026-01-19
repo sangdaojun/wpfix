@@ -1,7 +1,7 @@
 🛠️ wpfix (Windows Path Fixer)
 wpfix is a high-performance, zero-dependency CLI tool written in pure C, designed to manage and repair the Windows PATH environment variable with surgical precision.
 
-Unlike the standard setx command, wpfix ensures your PATH remains clean, deduplicated, and instantly synchronized across all active terminal windows without requiring a system reboot.
+Unlike the standard setx command, wpfix ensures your PATH remains clean, deduplicated, and instantly synchronized across all active terminal windows without requiring a terminal reboot.
 ### 🌟 Why wpfix?
 
 Most Windows developers hate the "restart CMD to refresh PATH" ritual. **wpfix** solves this by using real-time environment synchronization.
@@ -63,12 +63,14 @@ Bash
 
 wpfix add .
 wpfix add C:\Tools\my_bin
+
 2. Removing a Path
 Removes a specific directory from the User PATH registry.
 
 Bash
 
 wpfix del C:\Old\Path
+
 3. Surgeon Mode (Diagnostics)
 The "Surgeon" command performs a deep health check of your entire environment.
 
